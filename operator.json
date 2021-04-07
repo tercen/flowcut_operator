@@ -1,30 +1,57 @@
 {
-  "name": "Template R operator",
-  "description": "Return the medium value of a cell",
+  "name": "flowCut",
+  "description": "flowCut operator for quality control of flowcytometry data",
   "tags": ["template"],
   "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/template_R_operator"],
+  "urls": ["https://github.com/BvHeeswijk/flowCut_operator"],
   "properties": [
    {
-    "kind": "StringProperty",
-    "name": "string_example",
-    "defaultValue": "example",
-    "description": "description parameter 1"
+    "kind": "DoubleProperty",
+    "name": "Segment",
+    "defaultValue": 500,
+    "description": "Number of events in a segment."
     },
     {
-    "kind": "EnumeratedProperty",
-    "name": "list_example",
-    "defaultValue": "value1",
-    "values": [
-      "value1",
-      "StringProperty",
-      "DoubleProperty",
-      "BooleanProperty",
-      "EnumeratedProperty"
-    ],
-    "description": "description parameter 2"
-  }
+    "kind": "DoubleProperty",
+    "name": "MaxContin",
+    "defaultValue": 0.1,
+    "description": "Difference of the mean of a given segment to the mean of an adjacent segment."
+    },
+    {
+    "kind": "DoubleProperty",
+    "name": "MeanOfMeans",
+    "defaultValue": 0.13,
+    "description": "Mean value of percentage differences between the difference of the maximum and minimum mean."
+    },
+    {
+    "kind": "DoubleProperty",
+    "name": "MaxOfMeans",
+    "defaultValue": 0.15,
+    "description": "Max value of percentage differences between the difference of the maximum and minimum mean."
+    },
+    {
+    "kind": "DoubleProperty",
+    "name": "MaxValleyHgt",
+    "defaultValue": 0.1,
+    "description": "Maximum height of the intersection point of the cutoff line and the density of summed measure plot."
+    },
+    {
+    "kind": "DoubleProperty",
+    "name": "MaxPercCut",
+    "defaultValue": 0.3,
+    "description": "Value between 0 and 1 that sets the percentage of events that a user is willing to potentially cut. I"
+    },
+    {
+    "kind": "DoubleProperty",
+    "name": "LowDensityRemoval",
+    "defaultValue": 0.1,
+    "description": "Value between 0 and 1. Any events having a density of less than LowDensityRemoval are removed"
+    },
+    {
+    "kind": "DoubleProperty",
+    "name": "RemoveMultiSD",
+    "defaultValue": 7,
+    "description": "Used to remove very statistically different segments even whenthe file is nice.  It is the amount of standard deviations away from the mean of all segments of which anything larger will be removed."
+    }
   ]
 }
-
-
