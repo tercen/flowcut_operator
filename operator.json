@@ -3,7 +3,7 @@
   "description": "flowCut operator for quality control of flowcytometry data",
   "tags": ["template"],
   "authors": ["tercen"],
-  "urls": ["https://github.com/BvHeeswijk/flowCut_operator"],
+  "urls": ["https://github.com/tercen/flowcut_operator"],
   "properties": [
    {
     "kind": "DoubleProperty",
