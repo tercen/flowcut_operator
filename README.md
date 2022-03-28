@@ -1,4 +1,4 @@
-# flowai operator
+# flowcut operator
 
 #### Description
 
