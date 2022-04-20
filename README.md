@@ -1,8 +1,8 @@
-# flowcut operator
+# flowCut operator
 
-#### Description
+##### Description
 
-`flowCut` operator performs quality control on flowcytometry data.
+The `flowCut` operator performs quality control on flow cytometry data.
 
 ##### Usage
 
@@ -28,10 +28,6 @@ Input parameters|.
 `LowDensityRemoval`| A numerical value between 0 and 1.  Any events having a density of less thanLowDensityRemoval are removed. The default is 0.1.
 `RemoveMultiSD`   | A numeric value used to remove very statistically different segments even whenthe file is nice.  It is the amount of standard deviations away from the mean ofall segments of which anything larger will be removed. Default is 7, not advisedto reduce this below 3.
 
-
-
-
-
 ##### Details
 
 FlowCut’s methodology is based on identifying both regions of low density and segments (defaultsize of 500 events) that are significantly different from the rest.  
@@ -40,9 +36,9 @@ The density of the summation of the 8 measures and two parameters(MaxValleyHgt a
 
 #### Reference
 
-[flowCut R package]((https://bioconductor.org/packages/release/bioc/html/flowCut.html))
+[flowCut R package](https://bioconductor.org/packages/release/bioc/html/flowCut.html)
 
 ##### See Also
 
-[flowAI R package]((http://bioconductor.org/packages/release/bioc/html/flowAI.html))
-[flowClean R package]((http://bioconductor.org/packages/release/bioc/html/flowClean.html))
+[flowAI operator](https://github.com/tercen/flowai_operator),
+[flowClean operator](https://github.com/tercen/flowclean_operator)
