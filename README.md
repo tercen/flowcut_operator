@@ -34,9 +34,7 @@ FlowCut’s methodology is based on identifying both regions of low density and 
 Eight measures of each segment(mean, median, 5th, 20th, 80th and 95th percentile, second moment (variation) and third moment(skewness)) are calculated.  
 The density of the summation of the 8 measures and two parameters(MaxValleyHgt and MaxPercCut) will determine which events are significantly different and these will  be  removed.
 
-#### Reference
-
-[flowCut R package](https://bioconductor.org/packages/release/bioc/html/flowCut.html)
+The operator is a wrapper of the `flowCut` function from the [flowCut R package](https://bioconductor.org/packages/release/bioc/html/flowCut.html).
 
 ##### See Also
 
