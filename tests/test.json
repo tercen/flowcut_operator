@@ -16,7 +16,7 @@
   ], 
   "inputDataUri": "exemple_FCS_long.csv",
   "outputDataUri": ["table1.csv","table2.csv"],
-  "columns": ["TIME"],
+  "columns": ["Time"],
   "rows": ["CHANNEL"],
   "colors": [],
   "labels": [],
