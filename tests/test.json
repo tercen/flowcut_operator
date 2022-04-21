@@ -1,19 +1,7 @@
 {
   "kind": "OperatorUnitTest",
-  "name": "FlowClean",
-  "namespace": "ds0",
-  "propertyValues": [
-    {
-    "kind": "PropertyValue",
-    "name": "nCellCutoff",
-    "value": "10"
-    },
-    {
-    "kind": "PropertyValue",
-    "name": "bypass",
-    "value": "true"
-  }
-  ], 
+  "name": "FlowCut",
+  "namespace": "ds0", 
   "inputDataUri": "exemple_FCS_long.csv",
   "outputDataUri": ["table1.csv","table2.csv"],
   "columns": ["Time"],
