@@ -4,6 +4,10 @@ library(tibble)
 library(flowCore)
 library(flowCut)
 
+#library(tim)
+#options("tercen.workflowId" = "6015a4dd34cef273755e1a1b1500427b")
+#options("tercen.stepId"     = "6cdc68d5-a0e7-4ab5-b561-448ab2d6f7bb")
+
 matrix2flowFrame <- function(a_matrix){ 
   
   minRange <- matrixStats::colMins(a_matrix)
@@ -65,9 +69,9 @@ flowcut_QC <- function(flowframe, input.pars){
 ctx <- tercenCtx()
 
 if(ctx$cnames[1] == "filename") {filename <- TRUE
-if(ctx$cnames[2] != "Time") stop("Time not detected in the second column.")
+if(toupper(ctx$cnames[2]) != "TIME") stop("Time not detected in the second column.")
 }else{filename <- FALSE
-if(ctx$cnames[1] != "Time") stop("filename or Time not detected in the top column.")
+if(toupper(ctx$cnames[1]) != "TIME") stop("filename or Time not detected in the top column.")
 }
 
 celldf <- ctx %>% dplyr::select(.ri, .ci) 
@@ -113,4 +117,12 @@ QC_allfiles <- lapply(filenames, function(x) {
 
 qc_df$QC_flag <- do.call(c, QC_allfiles)
 flowcut_QC <- cbind(qc_df, .ci = (0:(nrow(qc_df)-1)))
-ctx$addNamespace(flowcut_QC) %>% ctx$save()
+
+df.out<-ctx$addNamespace(flowcut_QC)
+
+df.out  %>%
+  ctx$save()
+
+#tim::build_test_data(res_table = df.out, ctx = ctx, test_name = "test1")
+
+
