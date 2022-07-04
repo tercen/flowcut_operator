@@ -2,6 +2,7 @@
   "name": "flowCut",
   "description": "Perform quality control of flow cytometry data using flowCut.",
   "tags": ["flow cytometry", "QC"],
+  "container": "tercen/flowcu_operator:0.1.4",
   "authors": ["tercen"],
   "urls": ["https://github.com/tercen/flowcut_operator"],
   "properties": [
