@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.0.4",
+    "Version": "4.2.0",
     "Repositories": [
       {
         "Name": "TERCEN",
@@ -1013,16 +1013,40 @@
     "teRcenHttp": {
       "Package": "teRcenHttp",
       "Version": "1.0.21",
-      "Source": "Repository",
-      "Repository": "TERCEN",
-      "Hash": "18e6c920fb7ddb33ea4e265098ca24c9"
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "tercen",
+      "RemoteRepo": "teRcenHttp",
+      "RemoteRef": "1.0.21",
+      "RemoteSha": "2997686f396aedbf3f3bfc0a6eaeb623434351bb",
+      "Hash": "d11c997e9090e1f2200381c981764ebc"
     },
     "tercen": {
       "Package": "tercen",
-      "Version": "0.10.8",
-      "Source": "Repository",
-      "Repository": "TERCEN",
-      "Hash": "7676dd098faf9b2267411f8f129f5d8b"
+      "Version": "0.12.7",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "Remotes": "tercen/tercenApi@0.12.7",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "teRcen",
+      "RemoteUsername": "tercen",
+      "RemoteRef": "0.12.7",
+      "RemoteSha": "b6872f66ae4de70420c80c834e6e4da076fee2d3",
+      "Hash": "8ed69059792b34fb7dd616d4a6a32eda"
+    },
+    "tercenApi": {
+      "Package": "tercenApi",
+      "Version": "0.12.7",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "Remotes": "tercen/teRcenHttp@1.0.21",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "tercenApi",
+      "RemoteUsername": "tercen",
+      "RemoteRef": "0.12.7",
+      "RemoteSha": "2c42ab2edef2365bd5d654be331a4ac6e93250f0",
+      "Hash": "cc1559c7c5b4030cca90a3d324e19b9b"
     },
     "testthat": {
       "Package": "testthat",
@@ -1052,25 +1076,19 @@
       "Repository": "RSPM",
       "Hash": "6ea435c354e8448819627cf686f66e0a"
     },
-    "tim": {
-      "Package": "tim",
-      "Version": "0.0.14",
-      "Source": "GitHub",
-      "Remotes": "tercen/teRcen@0.12.7",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "tim",
-      "RemoteUsername": "tercen",
-      "RemoteRef": "master",
-      "RemoteSha": "2afc1f2e6b3410278a9f10918a604bad364253b3",
-      "Hash": "e481496ea573ddc07ef376416a444701"
-    },
     "utf8": {
       "Package": "utf8",
       "Version": "1.2.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "c3ad47dc6da0751f18ed53c4613e3ac7"
+    },
+    "uuid": {
+      "Package": "uuid",
+      "Version": "1.1-0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "f1cb46c157d080b729159d407be83496"
     },
     "vctrs": {
       "Package": "vctrs",
