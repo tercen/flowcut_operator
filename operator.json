@@ -1,58 +1,65 @@
 {
   "name": "flowCut",
   "description": "Perform quality control of flow cytometry data using flowCut.",
-  "tags": ["flow cytometry", "QC"],
+  "tags": [
+    "flow cytometry",
+    "QC"
+  ],
   "container": "tercen/flowcut_operator:0.1.6",
-  "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/flowcut_operator"],
+  "authors": [
+    "tercen"
+  ],
+  "urls": [
+    "https://github.com/tercen/flowcut_operator"
+  ],
   "properties": [
-   {
-    "kind": "DoubleProperty",
-    "name": "Segment",
-    "defaultValue": 500,
-    "description": "Number of events in a segment."
+    {
+      "kind": "DoubleProperty",
+      "name": "Segment",
+      "defaultValue": 500,
+      "description": "Number of events in a segment."
     },
     {
-    "kind": "DoubleProperty",
-    "name": "MaxContin",
-    "defaultValue": 0.1,
-    "description": "Difference of the mean of a given segment to the mean of an adjacent segment."
+      "kind": "DoubleProperty",
+      "name": "MaxContin",
+      "defaultValue": 0.1,
+      "description": "Difference of the mean of a given segment to the mean of an adjacent segment."
     },
     {
-    "kind": "DoubleProperty",
-    "name": "MeanOfMeans",
-    "defaultValue": 0.13,
-    "description": "Mean value of percentage differences between the difference of the maximum and minimum mean."
+      "kind": "DoubleProperty",
+      "name": "MeanOfMeans",
+      "defaultValue": 0.13,
+      "description": "Mean value of percentage differences between the difference of the maximum and minimum mean."
     },
     {
-    "kind": "DoubleProperty",
-    "name": "MaxOfMeans",
-    "defaultValue": 0.15,
-    "description": "Max value of percentage differences between the difference of the maximum and minimum mean."
+      "kind": "DoubleProperty",
+      "name": "MaxOfMeans",
+      "defaultValue": 0.15,
+      "description": "Max value of percentage differences between the difference of the maximum and minimum mean."
     },
     {
-    "kind": "DoubleProperty",
-    "name": "MaxValleyHgt",
-    "defaultValue": 0.1,
-    "description": "Maximum height of the intersection point of the cutoff line and the density of summed measure plot."
+      "kind": "DoubleProperty",
+      "name": "MaxValleyHgt",
+      "defaultValue": 0.1,
+      "description": "Maximum height of the intersection point of the cutoff line and the density of summed measure plot."
     },
     {
-    "kind": "DoubleProperty",
-    "name": "MaxPercCut",
-    "defaultValue": 0.3,
-    "description": "Value between 0 and 1 that sets the percentage of events that a user is willing to potentially cut. I"
+      "kind": "DoubleProperty",
+      "name": "MaxPercCut",
+      "defaultValue": 0.3,
+      "description": "Value between 0 and 1 that sets the percentage of events that a user is willing to potentially cut. I"
     },
     {
-    "kind": "DoubleProperty",
-    "name": "LowDensityRemoval",
-    "defaultValue": 0.1,
-    "description": "Value between 0 and 1. Any events having a density of less than LowDensityRemoval are removed"
+      "kind": "DoubleProperty",
+      "name": "LowDensityRemoval",
+      "defaultValue": 0.1,
+      "description": "Value between 0 and 1. Any events having a density of less than LowDensityRemoval are removed"
     },
     {
-    "kind": "DoubleProperty",
-    "name": "RemoveMultiSD",
-    "defaultValue": 7,
-    "description": "Used to remove very statistically different segments even whenthe file is nice.  It is the amount of standard deviations away from the mean of all segments of which anything larger will be removed."
+      "kind": "DoubleProperty",
+      "name": "RemoveMultiSD",
+      "defaultValue": 7,
+      "description": "Used to remove very statistically different segments even whenthe file is nice.  It is the amount of standard deviations away from the mean of all segments of which anything larger will be removed."
     }
   ]
 }
