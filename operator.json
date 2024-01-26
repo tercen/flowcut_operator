@@ -1,6 +1,6 @@
 {
   "name": "flowCut",
-  "description": "Perform quality control of flow cytometry data using flowCut.",
+  "description": "Performs quality control of flow cytometry data.",
   "tags": [
     "flow cytometry",
     "QC"
